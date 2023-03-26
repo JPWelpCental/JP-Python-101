@@ -2,15 +2,8 @@
 python notes  
 
 1. [Expressions](#expressions)
-2. [Data Type](#data-type)
-
-
-
-
-
-
-
-
+2. [Data Types](#data-types)
+3. [Statements](#statements)
 ## Expressions
 
 ### Basic Operators
@@ -100,11 +93,47 @@ warning indention still matter if is in functions
 "\f"	                #Formfeed
 "\v"	                #Vertical Tab
 "\0"	                #Null Character
-"\N{Name}"	            #Unicode character Database named lookup
+"\N{Name}"              #Unicode character Database named lookup
 "\uxxxxxxxx"	        #Unicode character with a 16-bit hex value
 "\Uxxxxxxxx"	        #Unicode character with a 32-bit hex value
 "\000"	                #Character with octal value ooo
 "\xhh"	                #Character with hex value hh
 ```
-### Type casting
 
+## Statements
+basically everything you do in python
+```python
+a=b                     #declaration is a statement
+a+b                     #expressiong is a statement
+pass                    #null statement,does nothing just prevent error
+
+if x:
+    a                   #If x is True, evaluate a
+elif y
+    b                   #If not x and y (optional, may be repeated)
+else:
+    c                   #If not x and not y (optional)
+
+while x:
+    a                   #iterate a 0 or more times while x is true
+else:
+    b                   #evaluate b if while loop did not break
+
+for i in range(n):
+    a                   #iterate a n times with i being the range
+for i in str_a:      
+    b                   #iterate b len(str_a) times with i being characters from str_a
+
+
+break                   #Jump out of while, do, or for loop, or switch
+continue                #Jump to bottom of while or for loop
+return x                #Return x from function to caller
+try:
+    a
+except:
+    b                  #evaluate b if a return an error
+else:
+    c                  #evaluate c if a does not return an error
+finally:
+    d                  #evaluate d no regardless if a return an error or not
+```

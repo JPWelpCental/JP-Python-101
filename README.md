@@ -55,7 +55,7 @@ not a                   #return opposite of a
 ## Data Types
 
 ### Literals
-There is a type casting funciton for each corresponding data types below  
+There is a type casting function for each corresponding data types below  
 use ```type()``` function to see each of their data type
 ```python
 21                      #integer/decimal        
@@ -99,12 +99,18 @@ warning indention still matter if is in functions
 "\000"	                #Character with octal value ooo
 "\xhh"	                #Character with hex value hh
 ```
+### Simple Data manipulate 
+```python
+2-1.0, 1%2.0            #return 1.0,int with float will give float
+1*False, 1-True         #return 0,bool can be treated as 1 or 0
+"HiHI"*3,'Hi'*6         #return "HiHiHiHiHiHi"
+```
 
 ## Statements
 basically everything you do in python
 ```python
-a=b                     #declaration is a statement
-a+b                     #expressiong is a statement
+a=b                     #declarations are all statement
+a+b                     #expressions are all statements
 pass                    #null statement,does nothing just prevent error
 
 if x:
@@ -124,16 +130,36 @@ for i in range(n):
 for i in str_a:      
     b                   #iterate b len(str_a) times with i being characters from str_a
 
-
 break                   #Jump out of while, do, or for loop, or switch
 continue                #Jump to bottom of while or for loop
 return x                #Return x from function to caller
 try:
     a
 except:
-    b                  #evaluate b if a return an error
+    b                   #evaluate b if a return an error
 else:
-    c                  #evaluate c if a does not return an error
+    c                   #evaluate c if a does not return an error
 finally:
-    d                  #evaluate d no regardless if a return an error or not
+    d                   #evaluate d no regardless if a return an error or not
+```
+## Functions
+### Global And Local
+For all computing language variables declared in functions, loops and if statements can be use inside other functions, loops and if statements inside it however those variable inside cannot be use outside of where it is declared
+
+
+### Function Vs Procedure
+Function and procedure had to define as shown to be used  
+function return a value while procedure does not  
+the function will end when the return function is called
+use ```return``` or ```return None``` to end procedure early 
+
+```python
+def Function_Name(Parameter):#
+    pass                #null statement use to prevent error for empty function
+    return Parameter    #return value Parameter and it data type
+
+def Procedure_Name(Parameter):
+    pass                #will be called
+    return              #function end
+    pass                #will not be called
 ```
